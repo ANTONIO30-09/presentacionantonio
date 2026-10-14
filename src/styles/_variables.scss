@@ -1,0 +1,27 @@
+// ============================================
+// Variables personalizadas — Portafolio
+// ============================================
+
+// Colores (sobreescriben Bootstrap)
+$primary:   #0563bb;
+$secondary: #45505b;
+$success:   #28a745;
+$info:      #17a2b8;
+$warning:   #ffc107;
+$danger:    #dc3545;
+$dark:      #1a1f2e;
+$light:     #f2f5f9;
+
+// Tipografía
+$font-family-base: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-family-heading: 'Raleway', sans-serif;
+$font-size-base: 1rem;
+$headings-font-weight: 700;
+
+// Bordes
+$border-radius: 8px;
+$border-radius-lg: 12px;
+
+// Habilitar utilidades
+$enable-negative-margins: true;
+$enable-cssgrid: true;

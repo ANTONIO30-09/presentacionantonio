@@ -1,0 +1,33 @@
+<section id="portfolio" class="portfolio section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Portafolio</h2>
+    <p>Mis proyectos y trabajos destacados</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <ul class="portfolio-filters">
+      <li [class.filter-active]="activeFilter() === '*'" (click)="setFilter('*')">Todos</li>
+      <li [class.filter-active]="activeFilter() === 'ai'" (click)="setFilter('ai')">IA / ML</li>
+      <li [class.filter-active]="activeFilter() === 'app'" (click)="setFilter('app')">Aplicaciones</li>
+      <li [class.filter-active]="activeFilter() === 'tools'" (click)="setFilter('tools')">Herramientas</li>
+      <li [class.filter-active]="activeFilter() === 'web'" (click)="setFilter('web')">Web</li>
+    </ul>
+
+    <div class="row gy-4 portfolio-container">
+      @for (project of filteredProjects(); track project.id) {
+        <div class="col-lg-4 col-md-6 portfolio-item">
+          <div class="portfolio-content h-100">
+            <img [src]="project.image" class="img-fluid" [alt]="project.name">
+            <div class="portfolio-info">
+              <h4>{{ project.name }}</h4>
+              <p>{{ project.description }}</p>
+              <a [href]="project.url" target="_blank" class="details-link" title="Ver en GitHub">
+                <i class="bi bi-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<header id="header"
+        class="header d-flex align-items-center fixed-top"
+        [class.header-scrolled]="isScrolled()">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+    <a href="#hero" class="logo d-flex align-items-center">
+      <h1 class="sitename">Antonio García</h1>
+    </a>
+
+    <nav id="navmenu" class="navmenu" [class.navmenu-show]="mobileNavOpen()">
+      <ul>
+        <li><a href="#hero" class="active">Inicio</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#portfolio">Portafolio</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"
+         (click)="toggleMobileNav()"></i>
+    </nav>
+
+  </div>
+</header>

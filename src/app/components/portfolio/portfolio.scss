@@ -1,0 +1,118 @@
+.portfolio {
+  padding: 80px 0;
+
+  .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      position: relative;
+      color: #45505b;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: #0563bb;
+        bottom: 0;
+        left: calc(50% - 20px);
+      }
+    }
+  }
+
+  .portfolio-filters {
+    padding: 0;
+    margin: 0 auto 35px;
+    list-style: none;
+    text-align: center;
+
+    li {
+      cursor: pointer;
+      display: inline-block;
+      padding: 8px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 50px;
+      margin: 0 5px;
+      color: #45505b;
+      transition: 0.3s;
+
+      &:hover, &.filter-active {
+        color: #fff;
+        background: #0563bb;
+      }
+    }
+  }
+
+  .portfolio-content {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-info {
+      position: absolute;
+      inset: 0;
+      background: rgba(5, 99, 187, 0.85);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      padding: 20px;
+      opacity: 0;
+      transition: 0.4s;
+      text-align: center;
+
+      h4 {
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+
+      .details-link {
+        color: #fff;
+        font-size: 24px;
+        border: 2px solid #fff;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+
+        &:hover {
+          background: #fff;
+          color: #0563bb;
+        }
+      }
+    }
+
+    &:hover .portfolio-info {
+      opacity: 1;
+    }
+  }
+}
